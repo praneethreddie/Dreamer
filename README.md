@@ -24,7 +24,7 @@ Dreamer is an innovative application that helps you understand your dreams bette
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/dreamer.git
+git clone https://github.com/praneethreddie/dreamer.git
 
 # Navigate to project directory
 cd dreamer
