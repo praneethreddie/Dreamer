@@ -1,0 +1,500 @@
+:root {
+    --primary-color: #9d6cff;
+    --background-start: #2a1b3d;
+    --background-end: #1a1b3c;
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--background-start), var(--background-end));
+    color: var(--text-color);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #9d6cff, #c17aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-btn {
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+.nav-btn.active {
+    background: var(--primary-color);
+    box-shadow: 0 0 20px rgba(157, 108, 255, 0.3);
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    resize: vertical;
+}
+
+.emotion-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.emotion-tag {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+}
+
+.emotion-tag:hover, .emotion-tag.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.analyze-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(157, 108, 255, 0.4);
+}
+
+#interpretation {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.interpretation-item {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+/* Loading spinner updates */
+.spinner {
+    border-color: rgba(255, 255, 255, 0.1);
+    border-top-color: var(--primary-color);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Optional hover effect */
+.footer:hover {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.dream-visualization {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.dream-image {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(157, 108, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.dream-image:hover {
+    transform: scale(1.02);
+}
+
+.interpretation-content {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.interpretation-content h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.interpretation-heading {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.interpretation-point {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.interpretation-point::before {
+    content: '•';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--primary-color);
+}
+
+.image-prompt-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(157, 108, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(157, 108, 255, 0.2);
+}
+
+.image-prompt-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.prompt-text {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.copy-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 1rem 0;
+}
+
+.prompt-hint {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+}
+
+/* Emotion button styles */
+.emotion-tag {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.emotion-tag.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(157, 108, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Loading screen styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(42, 27, 61, 0.9);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(157, 108, 255, 0.1);
+    border-left-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+.loading-screen p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.loading-subtitle {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.9rem !important;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.ai-tools-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(157, 108, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(157, 108, 255, 0.2);
+}
+
+.ai-tools-section h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.ai-tool-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.tool-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.tool-icon {
+    font-size: 24px;
+}
+
+.tool-header h4 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.tool-instruction {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.prompt-box {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+
+.prompt-text {
+    margin: 0 0 1rem 0;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.copy-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 auto;
+}
+
+.copy-btn:hover {
+    background: #8257e5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(157, 108, 255, 0.2);
+}
+
+/* Make buttons responsive */
+@media (max-width: 600px) {
+    .ai-buttons {
+        flex-direction: column;
+    }
+    
+    .ai-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.dream-summary {
+    background: rgba(157, 108, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dream-date {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.selected-emotions {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ai-services {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-btn {
+    background: rgba(157, 108, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.new-dream-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 2rem auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.new-dream-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Add smooth transitions */
+.interpretation-section, .ai-tools-section {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Make textarea more engaging */
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(157, 108, 255, 0.2);
+    outline: none;
+}
+ 

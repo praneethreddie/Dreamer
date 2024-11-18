@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌙 Dreamer</h1>
+            <p class="subtitle">✨ Unlock the mysteries of your subconscious mind</p>
+        </header>
+
+        <nav>
+            <button class="nav-btn active">🔮 Analyze Dream</button>
+        
+        </nav>
+
+        <form id="dreamForm">
+            <textarea 
+                id="dreamDescription" 
+                placeholder="💭 Describe your dream..."
+                required></textarea>
+            
+            <div class="emotion-tags">
+                <button type="button" class="emotion-tag">😊 Joy</button>
+                <button type="button" class="emotion-tag">😨 Fear</button>
+                <button type="button" class="emotion-tag">😢 Sadness</button>
+                <button type="button" class="emotion-tag">😰 Anxiety</button>
+                <button type="button" class="emotion-tag">😌 Peace</button>
+                <button type="button" class="emotion-tag">😕 Confusion</button>
+            </div>
+
+            <button type="submit" class="analyze-btn">
+                ✨ Analyze Dream
+            </button>
+        </form>
+
+        <div id="loadingIndicator" class="hidden">
+            <div class="spinner"></div>
+            <p>Analyzing your dream...</p>
+        </div>
+
+        <div id="interpretation" class="hidden">
+            <h2>Dream Interpretation</h2>
+            <div id="interpretationText"></div>
+        </div>
+
+        <div id="error" class="hidden">
+            <p>🚨 Something went wrong. Please try again.</p>
+        </div>
+
+        <div class="loading-screen hidden">
+            <div class="loader-content">
+                <div class="spinner"></div>
+                <p>✨ Interpreting your dream...</p>
+                <p class="loading-subtitle">Unlocking the mysteries of your subconscious</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="app.js"></script>
+    <footer class="footer">
+        <p>Created by Praneeth</p>
+    </footer>
+</body>
+</html> 
