@@ -9,6 +9,8 @@ Dreamer is an innovative application that helps you understand your dreams bette
 - Providing psychological insights into your subconscious mind
 - Generating detailed image prompts that you can use with AI art generators to visualize your dreams
 
+## Experience it on https://dreamerr.netlify.app/
+
 ## Features
 
 - 🧠 **Dream Analysis**: Get detailed interpretations of your dreams using Google Gemini's advanced AI
