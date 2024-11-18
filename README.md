@@ -100,7 +100,7 @@ Output:
 
 For support, questions, or feature requests, please:
 - Open an issue
-- Contact: your@email.com
+- Contact: praneethreddyvallem@email.com
 
 ## Future Plans
 
